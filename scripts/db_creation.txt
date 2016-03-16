@@ -1,16 +1,12 @@
--- Table: public."Url"
+-- Table: public."Searches"
 
--- DROP TABLE public."Url";
+-- DROP TABLE public."Searches";
 
-CREATE TABLE public."Url"
+CREATE TABLE public."Searches"
 (
-  id integer NOT NULL DEFAULT nextval('"Url_id_seq"'::regclass),
-  value character varying
+  term character varying,
+  "when" timestamp without time zone DEFAULT now()
 )
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE public."Url"
-  OWNER TO postgres;
-
-  
